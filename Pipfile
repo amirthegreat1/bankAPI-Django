@@ -28,6 +28,8 @@ django-redis = "==5.4.0"
 reportlab = "==4.2.2"
 
 [dev-packages]
+watchfiles = "==0.24.0"
+black = "==24.10.0"
 
 [requires]
 python_version = "3.13"
