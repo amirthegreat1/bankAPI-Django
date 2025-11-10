@@ -20,12 +20,12 @@ django-celery-beat = "==2.8.0"
 cloudinary = "==1.39.1"
 python-dateutil = "==2.9.0"
 psycopg = "==3.2.3"
-loguru = "==0.7.2"
 redis = "==6.0.0"
 celery = "==5.5.3"
 flower = "==2.0.1"
 django-redis = "==5.4.0"
 reportlab = "==4.2.2"
+loguru = "==0.7.2"
 
 [dev-packages]
 watchfiles = "==0.24.0"
