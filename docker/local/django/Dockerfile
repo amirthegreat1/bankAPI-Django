@@ -42,6 +42,7 @@ RUN addgroup --system django && \
 COPY --from=python-build-stage /usr/src/app/wheels /wheels/
 
 RUN pip install --no-cache-dir --no-index --find-links=/wheels/ /wheels/* \
+    && pip install psycopg2-binary \
     && rm -rf /wheels/
 
 COPY --chown=django:django ./docker/local/django/entrypoint.sh /entrypoint.sh

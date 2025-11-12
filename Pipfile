@@ -26,6 +26,7 @@ flower = "==2.0.1"
 django-redis = "==5.4.0"
 reportlab = "==4.2.2"
 loguru = "==0.7.2"
+psycopg2-binary = "*"
 
 [dev-packages]
 watchfiles = "==0.24.0"
