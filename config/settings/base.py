@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from os import getenv, path
 from loguru import logger
 from datetime import timedelta
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # added one parent at the end because we moved setting into a folder
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
@@ -81,12 +82,11 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME":getenv("POSTGRES_DB"),
-        "USER":getenv("POSTGRES_USER"),
-        "PASSWORD":getenv("POSTGRES_PASSWORD"),
-        "HOST":getenv("POSTGRES_HOST"),
-        "PORT":getenv("POSTGRES_PORT"),
-    
+        "NAME": getenv("POSTGRES_DB"),
+        "USER": getenv("POSTGRES_USER"),
+        "PASSWORD": getenv("POSTGRES_PASSWORD"),
+        "HOST": getenv("POSTGRES_HOST"),
+        "PORT": getenv("POSTGRES_PORT"),
     }
 }
 
@@ -139,9 +139,18 @@ STATIC_ROOT = str(BASE_DIR / "staticfiles")
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+AUTH_USER_MODEL = "user_auth.User"
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
 
-AUTH_USER_MODEL = "user_app.User"
-
+SPECTAULAR_SETTINGS = {
+    "TITLE": "Amir Bank API",
+    "DESCRIPTION": "An API for a banking system",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+    "LICENCE": {"name": "MIT License", "url": "https://opensource.org/license/MIT"},
+}
 # disable default logging no avoid conflict with loguru
 LOGGING_CONFIG = None
 LOGURU_LOGGING = {
@@ -172,8 +181,8 @@ LOGURU_LOGGING = {
 logger.configure(**LOGURU_LOGGING)
 
 LOGGING = {
-    "version" : 1,
-    "disable_existing_loggers" : False,
-    "handlers" : {"loguru": {"class": "loguru.handler.LoguruHandler"}},
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {"loguru": {"class": "loguru.handler.LoguruHandler"}},
     "root": {"handlers": ["loguru"], "level": "DEBUG"},
 }
