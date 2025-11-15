@@ -140,6 +140,7 @@ STATIC_ROOT = str(BASE_DIR / "staticfiles")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+AUTH_USER_MODEL = "user_app.User"
 
 # disable default logging no avoid conflict with loguru
 LOGGING_CONFIG = None
