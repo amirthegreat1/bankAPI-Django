@@ -2,6 +2,7 @@
 .vscode
 .idea
 .staticfiles/
+staticfiles
 .envs/*
 !.envs/.env.example
 # Byte-compiled / optimized / DLL files
