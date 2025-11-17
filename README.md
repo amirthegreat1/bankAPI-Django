@@ -59,7 +59,7 @@ Designed for **local development**, **production deployment**, and **scalability
 ### **Backend**
 <img src="https://cdn.simpleicons.org/python/3776AB" height="40" />  
 <img src="https://cdn.simpleicons.org/django/092E20" height="40" />  
-<img src="https://cdn.simpleicons.org/djangorestframework/A30000" height="40" />
+
 
 ### **Database**
 <img src="https://cdn.simpleicons.org/postgresql/4169E1" height="40" />
