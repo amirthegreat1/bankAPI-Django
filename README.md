@@ -1,6 +1,6 @@
 
 
-````md
+
 # 🏦  Bank API
 
 A **production-ready, scalable, and secure banking API** built with **Django REST Framework**, **Docker**, **NGINX**, **Celery**, **Redis**, **RabbitMQ**, and **PostgreSQL**.  
@@ -38,7 +38,7 @@ It includes powerful features such as:
 
 Designed for **local development**, **production deployment**, and **scalability** with distributed task processing.
 
----
+
 
 ## ✨ Features
 
@@ -155,4 +155,12 @@ Email: [amirhosseinzhmt@gmail.com](amirhosseinzhmt@gmail.com)
 
 ```
 
-
+💻 Tech Stack
+Backend
+<img src="https://cdn.simpleicons.org/python/3776AB" height="40" /> <img src="https://cdn.simpleicons.org/django/092E20" height="40" /> <img src="https://cdn.simpleicons.org/djangorestframework/A30000" height="40" />
+Database
+<img src="https://cdn.simpleicons.org/postgresql/4169E1" height="40" />
+Caching, Queues & Async
+<img src="https://cdn.simpleicons.org/redis/DC382D" height="40" /> <img src="https://cdn.simpleicons.org/rabbitmq/FF6600" height="40" /> <img src="https://cdn.simpleicons.org/celery/37814A" height="40" />
+Infrastructure / DevOps
+<img src="https://cdn.simpleicons.org/docker/2496ED" height="40" /> <img src="https://cdn.simpleicons.org/nginx/009639" height="40" /> <img src="https://cdn.simpleicons.org/jsonwebtokens/000000" height="40" />
