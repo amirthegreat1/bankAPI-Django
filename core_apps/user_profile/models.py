@@ -35,7 +35,7 @@ class Profile(TimeStampedModel):
         PASSPORT = "PASSPORT", _("Passport")
         DRIVER_LICENSE = "DRIVER_LICENSE", _("Driver License")
 
-    class EmploymentStatus(models.Textchoices):
+    class EmploymentStatus(models.TextChoices):
         SELF_EMPLOYED = "SELF_EMPLOYED", _("Self Employed")
         EMPLOYED = "EMPLOYED", _("Employed")
         UNEMPLOYED = "UNEMPLOYED", _("Unemployed")
@@ -52,10 +52,10 @@ class Profile(TimeStampedModel):
     )
     gender = models.CharField(_("Gender"), max_length=8, choices=Gender.choices)
     birth_date = models.DateField(
-        _("Date of Birth"), default=settings.DEFUALT_BIRTH_DATE
+        _("Date of Birth"), default=settings.DEFAULT_BIRTH_DATE
     )
     birth_country = CountryField(
-        _("Country of Birth"), default=settings.DEFUALT_COUNTRY
+        _("Country of Birth"), default=settings.DEFAULT_COUNTRY
     )
     birth_place = models.CharField(
         _("Place of Birth"), max_length=50, default="Unknown"
@@ -73,21 +73,21 @@ class Profile(TimeStampedModel):
         default=Identificationmeans.NATIONAL_ID,
     )
     id_issue_date = models.DateField(
-        _("ID or Passport Issue Date"), default=settings.DEFUALT_DATE
+        _("ID or Passport Issue Date"), default=settings.DEFAULT_DATE
     )
     id_expiry_date = models.DateField(
-        _("ID or Passport Expiry Date"), default=settings.DEFUALT_EXPIRY_DATE
+        _("ID or Passport Expiry Date"), default=settings.DEFAULT_EXPIRY_DATE
     )
     passport_number = models.CharField(
         _("Passport Number"), max_length=30, null=True, blank=True
     )
     nationality = models.CharField(_("Nationality"), max_length=30, default="Unknown")
     phone_number = PhoneNumberField(
-        _("Phone Number"), default=settings.DEFUALT_PHONE_NUMBER
+        _("Phone Number"), default=settings.DEFAULT_PHONE_NUMBER
     )
     address = models.CharField(_("Address"), max_length=100, default="Unknown")
     city = models.CharField(_("City"), max_length=30, default="Unknown")
-    country = CountryField(_("Country"), default=settings.DEFUALT_COUNTRY)
+    country = CountryField(_("Country"), default=settings.DEFAULT_COUNTRY)
     employment_status = models.CharField(
         _("Employment Status"),
         max_length=30,
@@ -101,7 +101,7 @@ class Profile(TimeStampedModel):
         _("Annual Income"), max_digits=15, decimal_places=2, default=0.00
     )
     date_of_employment = models.DateField(
-        _("Date of Employment"), default=settings.DEFUALT_DATE
+        _("Date of Employment"), default=settings.DEFAULT_DATE
     )
     employer_address = models.CharField(
         _("Employer Address"), max_length=100, null=True, blank=True

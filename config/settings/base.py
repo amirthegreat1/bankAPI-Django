@@ -142,7 +142,7 @@ STATIC_ROOT = str(BASE_DIR / "staticfiles")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "user_auth.User"
-DEFUALT_BIRTH_DATE = date(1900, 1, 1)
+DEFAULT_BIRTH_DATE = date(1900, 1, 1)
 DEFAULT_DATE = date(2000, 1, 1)
 DEFAULT_EXPIRY_DATE = date(2025, 1, 1)
 DEFAULT_COUNTRY = "IR"
